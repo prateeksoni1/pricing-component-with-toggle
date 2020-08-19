@@ -37,6 +37,7 @@ const Button = styled.button`
   padding: 1rem;
   width: 100%;
   letter-spacing: 1px;
+  cursor: pointer;
 
   border: none;
   outline: none;
@@ -47,7 +48,7 @@ const Button = styled.button`
 const Price = styled.div`
   ${cardItem}
 
-  font-size: 3rem;
+  font-size: 4rem;
   color: #484a5e;
   padding: 2rem;
 `;
@@ -83,6 +84,11 @@ const Container = styled.div<CardContainerProps>`
           }
         `
       : css`
+          @media only screen and (min-width: 768px) {
+            padding: 3rem;
+            z-index: 2;
+          }
+
           color: #fff;
           background: linear-gradient(
             to right,
@@ -98,32 +104,5 @@ const Container = styled.div<CardContainerProps>`
             background: #fff;
             color: hsl(237, 63%, 64%);
           }
-        `}/* .price {
-        font-size: 3rem;
-        color: $head;
-      }
-
-      .props {
-        padding: 1rem;
-        border-bottom: 1px solid #dddddd;
-      }
-
-      .btn {
-        margin-top: 2rem;
-        padding: 1rem;
-        width: 100%;
-        letter-spacing: 1px;
-
-        &.primary {
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          color: #fff;
-          text-transform: uppercase;
-          background: linear-gradient(
-            left,
-            hsl(236, 72%, 79%),
-            hsl(237, 63%, 64%)
-          );
-        } */
+        `}
 `;

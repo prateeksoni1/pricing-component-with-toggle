@@ -59,15 +59,25 @@ const App: React.FC = () => {
           </Switch>
           <div>Monthly</div>
         </SwitchComponent>
-        {cards.map((card) => (
-          <Card pricing={pricing} {...card} />
-        ))}
+        <CardsContainer>
+          {cards.map((card) => (
+            <Card pricing={pricing} {...card} />
+          ))}
+        </CardsContainer>
       </Container>
     </Body>
   );
 };
 
 export default App;
+
+const CardsContainer = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 const SwitchComponent = styled.div`
   display: flex;
@@ -78,7 +88,12 @@ const SwitchComponent = styled.div`
   color: #b7b7c3;
 `;
 
-const Body = styled.div``;
+const Body = styled.div`
+  @media only screen and (min-width: 768px) {
+    width: min-content;
+    margin: auto;
+  }
+`;
 
 const Switch = styled.label`
   position: relative;
