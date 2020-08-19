@@ -72,7 +72,7 @@ const App: React.FC = () => {
 export default App;
 
 const CardsContainer = styled.div`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 375px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,20 +82,21 @@ const CardsContainer = styled.div`
 const SwitchComponent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 2rem;
   margin-bottom: 4rem;
   color: #b7b7c3;
 `;
 
 const Body = styled.div`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 375px) {
     width: min-content;
     margin: auto;
   }
 `;
 
 const Switch = styled.label`
+  margin: 0px 1rem;
   position: relative;
   display: inline-block;
   width: 60px;

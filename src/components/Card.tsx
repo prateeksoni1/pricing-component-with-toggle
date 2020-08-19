@@ -50,7 +50,11 @@ const Price = styled.div`
 
   font-size: 4rem;
   color: #484a5e;
-  padding: 2rem;
+  padding: 2rem 0px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const Feature = styled.div`
@@ -84,7 +88,7 @@ const Container = styled.div<CardContainerProps>`
           }
         `
       : css`
-          @media only screen and (min-width: 768px) {
+          @media only screen and (min-width: 375px) {
             padding: 3rem;
             z-index: 2;
           }
